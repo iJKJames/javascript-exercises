@@ -1,5 +1,6 @@
-const reverseString = function() {
-
+const reverseString = function(string) {
+toBackwards = '';
+toBackwards = string.split('');
 };
 
 // Do not edit below this line
