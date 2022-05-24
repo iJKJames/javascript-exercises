@@ -7,10 +7,14 @@ describe('sumAll', () => {
   test('works with large numbers', () => {
     expect(sumAll(1, 4000)).toEqual(8002000);
   });
-  test.skip('works with larger number first', () => {
+  test('works with larger number first', () => {
     expect(sumAll(123, 1)).toEqual(7626);
   });
-  test.skip('returns ERROR with negative numbers', () => {
+  //Added in test. Wanted to sumAll with numbers above 1.
+  test('works with a number above 1', () => {
+    expect(sumAll(4, 3)).toEqual(7);
+  });
+  test('returns ERROR with negative numbers', () => {
     expect(sumAll(-10, 4)).toEqual('ERROR');
   });
   test.skip('returns ERROR with non-number parameters', () => {

@@ -1,25 +1,24 @@
-const sumAll = function(int1, int2) {
+const sumAll = function(a, b) {
     numbers = [];
     sum = 0;
-    for (i = int1; i <= int2; i++) {
+    bigNum = '';
+    i = '';
+
+    (a > b) ? bigNum = a : bigNum = b;
+    (a > b) ? i = b : i = a;
+
+    
+    for (; i <= bigNum; i++) {
+        if (a < 0 || b < 0) {
+            sum = 'ERROR';
+            break;
+        }
         numbers.push(i);
     }
     for (i of numbers) {
         sum += i;
     }
     return sum;
-
-
-    //initialize int1
-
-    //initialize midInts
-
-    //loop through midInts
-    //add i to sum
-
-    //add int2
-
-    //return sum
 };
 
 // Do not edit below this line
