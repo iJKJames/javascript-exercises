@@ -1,4 +1,4 @@
-const sumAll = function(a, b) {
+const sumAll = function (a, b) {
     numbers = [];
     sum = 0;
     bigNum = '';
@@ -7,17 +7,22 @@ const sumAll = function(a, b) {
     (a > b) ? bigNum = a : bigNum = b;
     (a > b) ? i = b : i = a;
 
-    
+
     for (; i <= bigNum; i++) {
         if (a < 0 || b < 0) {
             sum = 'ERROR';
             break;
+        } else if (typeof(a) != 'number' || typeof (b) != 'number') {
+            sum = 'ERROR';
+            break;
+        } else {
+            numbers.push(i);
         }
-        numbers.push(i);
     }
     for (i of numbers) {
         sum += i;
     }
+    
     return sum;
 };
 
