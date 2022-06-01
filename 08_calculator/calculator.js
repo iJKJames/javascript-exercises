@@ -1,17 +1,26 @@
-const add = function() {
-	
+const add = function(...args) {
+  return args.reduce((previous, current) => {
+    return previous + current;
+  });
 };
 
-const subtract = function() {
-	
+const subtract = function(...args) {
+	return args.reduce((previous, current) => {
+    return previous - current;
+  });
 };
 
-const sum = function() {
-	
+const sum = function(array) {
+  let initialValue = 0;
+  let sumWithDefault = array.reduce((previousValue, currentValue) =>
+    previousValue + currentValue, initialValue)
+  return sumWithDefault;
 };
 
-const multiply = function() {
-
+const multiply = function(array) {
+  return array.reduce((previous, current) => {
+    return previous * current;
+});
 };
 
 const power = function() {
